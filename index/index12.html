@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="utf-8">
+   <title>JavaScriptの練習</title>
+ </head>
+ <body>
+  <script>
+   class Character{
+    constructor(name,hp){
+       this.name = name;
+       this.hp = hp;
+     }
+     attack(){
+         console.log(this.name + `の攻撃！`);
+       }
+   }
+   class Hero extends Character{
+     control(){}
+     superAttack(){}
+     speak(){}
+   }
+   
+   class Enemy extends Character{
+     dropItem(){}
+     getPoint(){}
+   }
+   const hero = new Hero(`主人公`,100);
+   const enemy = new Enemy(`敵`,10);
+   
+   hero.attack();
+   enemy.attack();
+  </script>
+ </body>
+</html>
